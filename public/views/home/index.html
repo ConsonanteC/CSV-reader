@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV File Reader</title>
 
+    <!-- styles -->
     <link rel="stylesheet" href="../styles/bootstrap.rtl.min.css">
 </head>
+
 <body>
     <section class="container">
         <div class="row">
@@ -14,40 +16,41 @@
                 <h1>CSV File Uploader</h1>
             </div>
         </div>
-
         <div class="row">
             <div class="col-4">
-                <form action="" id="csvForm">
+                <form id="csvForm">
                     <div class="mb-3">
                         <label for="csvFile">CSV File</label>
-                        <input type="file" class="form-control" id="csvFile" accept=".csv,.txt">
+                        <input type="file" class="form-control" id="csvFile" accept=".csv, .txt">
                     </div>
                     <div class="mb-3">
-                        <input type="submit" class="btn btn-primary" value="submit">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <!-- download button -->
+                        <button id="downloadCSV" class="btn btn-secondary" type="button">Download CSV</button>
                     </div>
                 </form>
             </div>
         </div>
-
+        <!-- search area -->
         <div class="row">
             <div class="col">
-                <div class="bm-3">
+                <div class="mb-3">
                     <label for="searchInput" class="form-label">Search</label>
                     <input type="text" class="form-control" id="searchInput" placeholder="Search...">
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 <!-- file area -->
-                <div id="displayAerea"></div>
+                <div id="displayArea"></div>
                 <!-- pagination -->
-                    <nav id="paginationControls" class="d-flex justify-content-center" aria-label="Page navigation"></nav>
+                 <nav id="paginationControls" class="d-flex justify-content-center" aria-label="page navigation"></nav>
             </div>
         </div>
-    </section>
 
-    <script type="module" src="../../components/index.js"></script>
+
+        <script type="module" src="../../components/index.js"></script>
+    </section>
 </body>
 </html>
